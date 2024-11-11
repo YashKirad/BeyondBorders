@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="A Affordable Travel Agency" />
+<meta name="keywords" content="Travel,Travel Packages" />
+<meta name="author" content="Yash Y. Kirad" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/script.js" defer></script>
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<link rel="stylesheet" href="css/styles.css" />
+<title>BeyondBorders - Travel Agency</title>
+</head>
+<body>
+<nav class="md:flex p-3 md:px-6 sticky top-0 z-50 bg-white">
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<svg xmlns="http://www.w3.org/2000/svg" width="16"
+height="16" fill="currentColor" class="bi bi-airplane" viewBox="0 0 16 16"
+>
+<path
+d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10
+2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-
+.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-
+5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-
+1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-
+.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-
+.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-
+.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-
+.458.158-.678.599"
+/>
+</svg>
+<a class="font-bold text-2xl text-red-600" href="#home">FLYFAR</a>
+</div>
+<svg>
+//hamberger menu svg
+</svg>
+<svg>
+ 
+//close nav svg
+</svg>
+</div>
+<div
+class="hidden md:flex justify-between items-center md:w-full md:ml-4" id="navbar"
+>
+<div class="flex items-center py-4 md:py-0 md:px-4">
+<ul
+class="flex flex-col gap-4 md:gap-8 md:flex-row md:text-sm md:font-semibold"
+>
+<li><a href="#home"> HOME </a></li>
+<li><a href="#book"> BOOK </a></li>
+<li class="inline-block relative group">
+<button class="text-nowrap">PACKAGES &#11206;</button>
+<div
+class="hidden flex flex-col absolute group-hover:block gap-2 md:gap-4 bg-white
+ 
+p-4"
+ 
+
+>
+<a href="#packages" class="text-nowrap bg-white"
+>United States</a
+>
+<a href="#packages" class="block">India</a>
+<a href="#packages">France</a>
+<a href="#packages">Germany</a>
+</div>
+</li>
+<li>
+<a href="#services"> SERVICES </a>
+</li>
+<li>
+<a href="#gallery"> GALLERY </a>
+</li>
+<li>
+<a href="#about"> ABOUT </a>
+</li>
+</ul>
+</div>
+<div class="flex flex-col md:flex-row gap-2 md:gap-4">
+<button
+class="border-2 px-4 py-1 rounded-md border-blue-800 bg-blue-800 hover:bg-
+ 
+transparent hover:text-blue-800 text-white font-semibold" onclick="loginModal()"
+>
+Login
+</button>
+<button
+class="border-2 px-4 py-1 rounded-md border-teal-700 bg-teal-700 hover:bg- transparent hover:text-teal-700 text-white font-semibold"
+onclick="registerModal()"
+ 
+>
+Register
+</button>
+</div>
+</div>
+</nav>
+<main
+class="h-[92vh] bg-[url('images/Background.webp')] bg-cover bg-center bg-no-repeat flex justify-center items-center"
+id="home"
+>
+<div class="text-center pt-32">
+<h1 class="text-6xl md:text-8xl font-bold py-4 tracking-normal"> WELCOME TO <span class="text-red-600">FLYFAR</span>
+</h1>
+<p class="text-4xl font-bold text-blue-800 py-4"> Visit
+<span
+class="animated-text bg-blue-800 text-white px-2 rounded-md"
+></span>
+</p>
+<button
+class="border-2 p-2 border-red-600 bg-red-600 text-white font-semibold rounded-md my-4 hover:bg-transparent hover:text-red-600"
+>
+Book Now
+</button>
+</div>
+</main>
+
+<!-- Book Section-->
+
+<section id="book">
+<h1 class="text-4xl font-bold text-center p-8 text-teal-700">Book</h1>
+<div class="flex flex-col md:gap-4 md:flex-row md:px-12">
+<div class="hidden md:block">
+<img
+src="images/Book-quote.webp" alt="image regarding travel agency" width="650px"
+class="rounded-md"
+/>
+</div>
+<div class="flex-1">
+<div class="flex justify-center items-center h-full">
+<form>
+<div class="md:flex gap-8 py-4">
+<div class="flex flex-col gap-8 pb-4 md:pb-0">
+<div class="flex flex-col">
+<label for="locations" class="font-bold text-lg"
+ 
+>Where to :
+</label>
+<select required
+name="locations" id="locations"
+class="text-base font-semibold p-1"
+>
+<option selected hidden>Select your destination</option>
+<option value="UnitedStates">United States</option>
+<option value="India">India</option>
+<option value="France">France</option>
+<option value="Germany">Germany</option>
+</select>
+</div>
+
+<div class="flex flex-col">
+<lable for="startdate" class="font-bold text-lg"
+>Start Date :
+</lable>
+<input required type="date"
+name="startdate" min="2024-10-12"
+id="startdate" placeholder="StartDate" class="font-semibold p-1"
+/>
+</div>
+</div>
+<div class="flex flex-col gap-8">
+<div class="flex flex-col">
+<label for="capacity" class="font-bold text-lg"
+>How many persons :
+</label>
+<input required
+type="number" name="capacity" id="capacity"
+class="border-2 text-base font-semibold p-1" placeholder="How many"
+/>
+</div>
+<div class="flex flex-col">
+<lable for="enddate" class="font-bold text-lg"
+>End Date :
+</lable>
+<input
+ 
+required type="date" name="enddate" id="enddate" min="2024-10-13"
+placeholder="EndDate" class="font-semibold p-1"
+/>
+</div>
+</div>
+</div>
+<div class="flex flex-col">
+<lable for="description" class="font-bold text-lg"
+>Description :
+</lable>
+<textarea required
+name="description" id="description" minlength="50" maxlength="500" cols="30" rows="5"
+class="border-2 font-semibold p-1"
+placeholder="Enter description of atleast 50 characters and above."
+></textarea>
+</div>
+<button
+class="border-2 p-2 px-4 border-red-600 bg-red-600 text-white font-semibold rounded-md my-4 hover:bg-transparent hover:text-red-600"
+id="submit"
+>
+Book Now
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Packages Section-->
+<section class="flex flex-col items-center" id="packages">
+<h1 class="text-4xl font-bold text-center p-8 text-teal-700">Packages</h1>
+<div class="md:w-[90vw]">
+<div
+class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:mx-12"
+>
+<figure
+class="mx-8 p-2 bg-gray-300 rounded-lg flex flex-col justify-center transition
+ 
+duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer"
+>
+<img src="images/packages/Usa.webp" alt="USA package" class="rounded-lg flex-1”/>
+<figcaption>
+<p class="text-2xl font-bold text-center p-1">United States</p>
+</figcaption>
+<p class="text-sm">
+USA is the Grand Canyon in Arizona, a breathtaking natural wonder carved by the Colorado River, offering stunning panoramic views and hiking trails. Its immense size and unique geological
+formations make it a must-see destination for nature lovers.
+</p>
+<div class="flex gap-1 h-5 my-2 w-min">
+<img src="images/packages/star-full.svg" alt="Full star" />
+<img src="images/packages/star-full.svg" alt="Full star" />
+<img src="images/packages/star-full.svg" alt="Full star" />
+<img src="images/packages/star-full.svg" alt="Full star" />
+<img src="images/packages/star-empty.svg" alt="Empty star" />
+</div>
+<div class="flex justify-between items-center text-lg">
+<p>Price :<span class="font-semibold">$259.99</span></p>
+<button
+class="border-2 p-1 border-red-600 bg-red-600 text-white font-semibold rounded- md hover:bg-transparent hover:text-red-600"
+>
+Book Now
+</button>
+</div>
+</figure>
+//8 more package figures
+</div>
+</div>
+</section>
+
+<!-- Services Section -->
+
+<section class="flex flex-col items-center" id="services">
+<h1 class="text-4xl font-bold text-center p-8 text-teal-700">Services</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 md:w-3/4 w-[90vw] gap-4">
+<div class="flex flex-col items-center border-2 p-2 rounded-md">
+<img src="images/services/hotel.svg" alt="services" width="50px" />
+<p class="font-semibold">Affordable Hotel</p>
+<p class="text-center text-sm">
+We offers budget-friendly accommodations without compromising comfort, ideal for travelers seeking value and convenience.
+</p>
+</div>
+ 
+//5 more services
+</div>
+</section>
+
+<!-- Gallery Section -->
+
+<section id="gallery">
+<h1 class="text-4xl font-bold text-center p-8 text-teal-700">Gallery</h1>
+<div class="flex flex-col items-center">
+<div
+class="grid grid-cols-1 md:grid-cols-3 grid-rows-2 gap-2 md:w-3/4 w-[90vw]"
+>
+<a
+href="#london"
+class="group relative flex h-48 items-end overflow-hidden bg-gray-100 shadow-lg md:h-80"
+>
+<img
+src="images/gallery/gallery-london.webp" alt="london city"
+class="absolute inset-0 h-full w-full object-cover object-center transition duration- 200 group-hover:scale-110"
+/>
+</a>
+</div>
+// 3 more images
+</div>
+</section>
+
+<!-- About Section -->
+
+<section class="mb-10" id="about">
+<h1 class="text-4xl font-bold text-center p-8 text-teal-700">About Us</h1>
+<div class="flex flex-col items-center">
+<div class="flex flex-col md:flex-row gap-8 md:w-4/5 w-[96vw]">
+<div><img src="images/about.webp" alt="travel image" /></div>
+<div>
+<p class="text-3xl font-bold py-2">How our travel agency works</p>
+<p class="py-2">
+At <span class="font-semibold">FLYFAR</span>, we turn dreams into destinations. With a passion for exploration and an eye for
+detail. From hidden gems to iconic landmarks, we handle every detail so you can focus on discovering, connecting, and creating memories that last a lifetime...
+</p>
+<button
+class="border-2 p-1 border-blue-800 bg-blue-800 text-white font-semibold rounded- md hover:bg-transparent hover:text-blue-800"
+>
+Read More...
+ 
+</button>
+</div>
+</div>
+</div>
+</section>
+
+<!--Footer -->
+
+<footer class="text-center p-2 bg-teal-700 text-white">
+<p class="font-bold text-lg">FlyFar</p>
+<p class="text-sm pb-2 font-semibold"> Where every journey becomes a story.
+</p>
+<div class="flex justify-center gap-4 py-1">
+<img src="images/socialicons/facebook.svg" width="35px"
+alt="facebook link"
+/>
+<img src="images/socialicons/twitter.svg" width="35px"
+alt="twitter link"
+/>
+<img src="images/socialicons/youtube.svg" width="35px"
+alt="youtube link"
+/>
+</div>
+<p class="py-1 text-xs italic">
+&copy; 2024 FlyFar. All rights reserved.
+</p>
+</footer>
+
+<!—Registration modal -->
+
+<dialog id="registerDialog" class="rounded-lg">
+<form onsubmit="validateRegisterForm(event)”>
+<div
+class="flex flex-col gap-3 p-8 md:p-12 backdrop-blur-md bg-white bg-opacity-80 rounded-lg"
+>
+<div class="flex items-center justify-between">
+<div class="flex justify-center items-center">
+<svg>
+//logo svg
+</svg>
+<p class="font-bold text-2xl text-red-600">FLYFAR</p>
+</div>
+ 
+<p
+class="font-bold text-2xl opacity-60 cursor-pointer" onclick=" closeRegisterModal()"
+>
+&times;
+</p>
+</div>
+<h1
+class="text-2xl md:text-4xl font-bold text-center p-2 text-teal-700"
+>
+CREATE ACCOUNT
+</h1>
+<div class="flex flex-col gap-4 items-center">
+<input type="text" id="fullname"
+class="font-semibold p-1 border-2 border-black rounded-md p-2 w-[250px] md:w- [300px]"
+placeholder="Enter Your Full name" autocomplete="on"
+required
+/>
+<input type="number" id="contact"
+class="font-semibold p-1 border-2 border-black rounded-md p-2 w-[250px] md:w- [300px]"
+placeholder="Enter your contact number" autocomplete="on"
+minlength="10" required
+/>
+<input type="email" id="registerEmail"
+class="font-semibold p-1 border-2 border-black rounded-md p-2 w-[250px] md:w- [300px]"
+placeholder="Enter your email" autocomplete="on"
+required
+/>
+<input type="password" id="registerPassword"
+class="font-semibold p-1 border-2 border-black rounded-md p-2 w-[250px] md:w- [300px]"
+placeholder="Enter your password" autocomplete="on"
+minlength="8" required
+ 
+/>
+<div class="flex flex-col">
+<label for="dob" class="font-bold opacity-40 text-xs"
+>Date of Birth:</label
+>
+<input type="date" id="dob"
+class="font-semibold p-1 border-2 border-black rounded-md p-2 w-[250px] md:w-
+ 
+[300px]"
+ 
+
+required autocomplete="on" min="1900-01-01"
+ 
+/>
+</div>
+<div>
+<select name="gender" id="gender"
+title="Select your gender"
+class="font-semibold p-1 border-2 border-black rounded-md p-2 w-[250px] md:w-
+[300px]"
+required
+>
+<option selected disabled class="opacity-60"> Select your gender
+</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Other</option>
+</select>
+</div>
+</div>
+<button
+class="p-2 border-red-600 bg-red-600 text-white font-semibold rounded-md my-2" type="submit"
+>
+Register
+</button>
+<div>
+<p
+onclick="redirectToLogin()"
+class="text-yellow-500 underline cursor-pointer italic text-sm"
+>
+Already have an account?
+</p>
+</div>
+</div>
+</form>
+</dialog>
+ 
+
+<!—Login modal -->
+
+<dialog id="loginDialog" class="rounded-lg">
+<form onsubmit="validateLogin(event)">
+<div
+class="flex flex-col gap-4 p-8 md:p-12 backdrop-blur-md bg-white bg-opacity-80"
+>
+<div class="flex items-center justify-between">
+<div class="flex justify-center items-center">
+<svg>
+//logo svg
+</svg>
+<p class="font-bold text-2xl text-red-600">FLYFAR</p>
+</div>
+<p
+class="font-bold text-2xl opacity-60 cursor-pointer" onclick=" closeLoginModal()"
+>
+&times;
+</p>
+</div>
+<h1
+class="text-2xl md:text-4xl font-bold text-center p-2 text-teal-700"
+>
+LOGIN IN
+</h1>
+<input type="email" id="email"
+class="font-semibold p-1 border-2 border-black rounded-md p-2 w-[250px] md:w- [300px]"
+placeholder="Enter your email" autocomplete="on"
+required
+/>
+<input type="password" id="password"
+class="font-semibold p-1 border-2 border-black rounded-md p-2 w-[250px] md:w- [300px]"
+placeholder="Enter your password" autocomplete="on"
+minlength="8" required
+/>
+<button
+class="p-2 px-4 border-red-600 bg-red-600 text-white font-semibold rounded-md my-
+ 
+4"
+type="submit" id="login"
+>
+Login
+</button>
+<div>
+<p
+onclick="redirectToRegister()"
+class="text-yellow-500 underline cursor-pointer italic text-sm"
+>
+Don't have an account?
+</p>
+</div>
+</div>
+</form>
+</dialog>
+</body>
+</html>
